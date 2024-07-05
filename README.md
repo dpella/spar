@@ -72,8 +72,8 @@ by running the Haskell interpreter.
 $ cabal repl
 ```
 
-In the Haskell prompt, you can explore the different functions
-provided by the library. For example:
+In the Haskell prompt, you can explore the different functions provided by the
+library. For example:
 
 ``` bash
 *Spar> :t cswp
@@ -94,7 +94,9 @@ dpCDF
      -> Deep.PM (m GHC.TypeNats.* eps) [(Bucket, Double)]
 
 Prelude Examples> runCDF
-[(0,15.088508887916229),(10,19.26063911103648),(20,24.403424680681656),(30,33.41216015467485),(40,33.37840042552355),(50,45.12906604164825),(60,62.31938886517386),(70,87.81957332084889)]
+[(0,15.088508887916229),(10,19.26063911103648),(20,24.403424680681656),
+(30,33.41216015467485),(40,33.37840042552355),(50,45.12906604164825),
+(60,62.31938886517386),(70,87.81957332084889)]
 ```
 
 ## Reproducing the results
@@ -104,7 +106,7 @@ can find them in the [Example.hs](./src/Example.hs) file. The type signatures of
 these examples are annotated with the expected sensitivity and/or privacy level
 as presented in the paper.
 
-# Contact
+## Contact
 
 If you have any questions or issues regarding the code, please contact Elisabet
 Lobo-Vesga at <lobo@dpella.io>.
