@@ -1,0 +1,37 @@
+with-compiler: ghc-8.6.5
+
+-- Internal packages
+packages: .
+
+-- Specify package from external version control
+source-repository-package
+    type: git
+    location: https://github.com/bgamari/the-thoralf-plugin.git
+    tag: fa4e403b25bfcaf9e8d5142ab40d3c54b33a3630
+
+-- Global compiler options
+program-options
+
+  -- Default warning flags
+  ghc-options:
+    -Wall
+    -Werror
+    -Wno-unticked-promoted-constructors
+
+  -- Default GHC extensions
+  ghc-options:
+    -XDataKinds
+    -XKindSignatures
+    -XTypeOperators
+    -XRankNTypes
+    -XGADTs
+    -XPatternSynonyms
+    -XTypeApplications
+    -XScopedTypeVariables
+    -XStandaloneDeriving
+    -XAllowAmbiguousTypes
+    -XTypeFamilies
+    -XTupleSections
+    -XInstanceSigs
+    -XFlexibleInstances
+    -XImplicitParams
