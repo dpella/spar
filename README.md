@@ -11,9 +11,9 @@ sensitivity of a function is reduced to type-checking!
 
 **Authors:**
 - Elisabet Lobo-Vesga (DPella AB)
+- Alejandro Russo (Chalmers/Göteborg University and DPella AB)
+- Marco Gaboardi (Boston University and DPella AB)
 - Carlos Tomé Cortiñas (Chalmers University)
-- Alejandro Russo (Chalmers University)
-- Marco Gaboardi (Boston University)
 
 The artifact is structured as follows:
 
@@ -112,5 +112,5 @@ If you have any questions or issues regarding the code, please contact Elisabet
 Lobo-Vesga at <lobo@dpella.io>.
 
 ## License
-Distribution of this artifact is subject to the terms of the MIT license. See
+Distribution of this artifact is subject to the terms of the Mozilla license. See
 the [LICENSE](./LICENSE) file for details.
