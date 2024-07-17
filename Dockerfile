@@ -24,11 +24,12 @@ RUN \
         build-essential \
         libncurses5 \
         libncurses5-dev \
-        z3
+        z3 \
+        llvm
 
 # Install ghcup
 RUN \
-    curl https://downloads.haskell.org/~ghcup/x86_64-linux-ghcup > /usr/bin/ghcup && \
+    curl https://downloads.haskell.org/~ghcup/$(uname -m)-linux-ghcup > /usr/bin/ghcup && \
     chmod +x /usr/bin/ghcup
 
 # Define GHC and cabal versions
