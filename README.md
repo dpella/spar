@@ -106,6 +106,31 @@ can find them in the [Example.hs](./src/Example.hs) file. The type signatures of
 these examples are annotated with the expected sensitivity and/or privacy level
 as presented in the paper.
 
+To facilitate the reproduction of the results, we present a reference table with
+the correspondence between the manuscript and the implementation, including the
+location of the code in the repository. The functions and types are presented in
+order of appearance in the manuscript.
+
+| Manuscript                  | Implementation                    | Location  | Notes |
+|-----------------------------|-----------------------------------|-----------| ------|
+| `Rel d a`                   | `Dist n a`                        | [Deep.hs](./src/Deep.hs) (line 31) | |
+| `smap`                      | `map'` and `senMap'`              | [Example.hs](./src/Example.hs) (lines 79-91)   | The manuscript overloads `smap`, one in terms of relational values and one in terms of sensitive functions |
+| `sfoldl`                    | `ucfoldL'`                        | [Example.hs](./src/Example.hs) (lines 111-112) | The implementation contains several variations of this function |
+| `sGFoldr`                   | `senFoldrL1`                      | [Example.hs](./src/Example.hs) (lines 195-203) | |
+| `sGFoldl`$_\infty$          | `senFoldlLInf`                    | [Example.hs](./src/Example.hs) (lines 168-176) | |
+| `foldr1`                    | `senFoldr1L1` and `senFoldr1LInf` | [Example.hs](./src/Example.hs) (lines 334-241, 259-266) | |
+| `cswp`                      | `cswp`                            | [Spar.hs](./src/Spar.hs) (lines 120-128) | |
+| insert sort                 | `fsort`                           | [Example.hs](./src/Example.hs) (lines 72-74) | |
+| $\text{PM } \chi \text{ a}$ | `PM e a`                          | [Deep.hs](./src/Deep.hs) (line 100) | |
+| `Set`$_0$                   | `SetOrigin`                       | [Spar.hs](./src/Spar.hs) (line 101) | |
+| `laplace`                   | `laplace`                         | [Spar.hs](./src/Spar.hs) (lines 318-342) | Manuscript's second version of `laplace` using the privacy monad |
+| `addNoise`                  | `addNoise`                        | [Spar.hs](./src/Spar.hs) (lines 351-367) | The first and second arguments are swapped |
+| `cdf`                       | `dpCDF`                           | [Example.hs](./src/Example.hs) (lines 486-494) | The manuscript omits the vector's norm |
+| `kmeans`                    | `kmean`                           | [Example.hs](./src/Example.hs) (lines 610-627) | The second and third arguments are swapped. The operands indexing the monad are in different order |
+| `vecSeq`                    | `vecSeq`                          | [Example.hs](./src/Example.hs) (lines 643-640) | The manuscript omits the vector's norm |
+| `partition`                 | `partition`                       | [Example.hs](./src/Example.hs) (lines 592-608) | The manuscript omits the vector's norm |
+| `findCenter`                | `findCenter`                      | [Example.hs](./src/Example.hs) (lines 542-599) | The manuscript omits the vector's norm |
+
 ## Contact
 
 If you have any questions or issues regarding the code, please contact Elisabet
